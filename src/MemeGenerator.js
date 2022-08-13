@@ -128,68 +128,72 @@ function MemeGenerator() {
   }
   
   return (
-    <div>
-      <Button 
-        className="zero meme-generator" 
-        onClick={toggleForm} 
-        variant="danger" 
+    <div className="home-container d-grid gap-2">
+      <Button
+        className="page-btn"
+        onClick={toggleForm}
+        variant="danger"
         type="button"
-      >Add Meme</Button>
-      <br></br>
-      {showForm ? <form className="zero meme-generator">
-        <label>Select an Image</label>
-          <input 
-            type="file" 
-            name="file" 
-            id="imageFileInput" 
+      >
+        Add Meme
+      </Button>
+      {showForm ? (
+        <form className="zero meme-generator">
+          <label>Select an Image</label>
+          <input
+            type="file"
+            name="file"
+            id="imageFileInput"
             onChange={uploadImage}
           />
-        <label>URL</label>
+          <label>URL</label>
           <input
             type="text"
             name="url"
             id="url"
             value={canvasState.url}
             onChange={handleChange}
-            >
-            </input>
-        <label>Top Text</label>
-          <input 
-            type="text" 
-            name="topText" 
-            id="topTextInput" 
-            value={canvasState.topText} 
+          ></input>
+          <label>Top Text</label>
+          <input
+            type="text"
+            name="topText"
+            id="topTextInput"
+            value={canvasState.topText}
             onChange={handleChangeTop}
           />
-        <label className="zero">Bottom Text</label>
-          <input 
+          <label className="zero">Bottom Text</label>
+          <input
             className="zero"
-            type="text" 
-            name="bottomText" 
-            id="bottomTextInput" 
-            value={canvasState.bottomText} 
+            type="text"
+            name="bottomText"
+            id="bottomTextInput"
+            value={canvasState.bottomText}
             onChange={handleChangeBottom}
           />
-        <Button 
-          id='download' 
-          className="meme-generator zero"
-          variant="danger" 
-          type="button"
-          onClick={handleDownload}
-        >Download</Button>
-      </form> : null}
-      <br></br>
+          <Button
+            id="download"
+            className="meme-generator zero"
+            variant="danger"
+            type="button"
+            onClick={handleDownload}
+          >
+            Download
+          </Button>
+        </form>
+      ) : null}
       <canvas
-        className="canvasbord" 
-        id='memegenerator' 
+        className="canvasbord"
+        id="memegenerator"
         src={canvasImage}
-      >
-      </canvas>
-      <div className='cards'>
-        {memes.map((meme) => <MemeCards selectImage={selectImage} key= {meme.id} meme={meme}/>)}
+      ></canvas>
+      <div className="cards">
+        {memes.map((meme) => (
+          <MemeCards selectImage={selectImage} key={meme.id} meme={meme} />
+        ))}
       </div>
     </div>
-  )
+  );
 }
 
 export default MemeGenerator

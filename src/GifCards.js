@@ -13,8 +13,8 @@ function GifCards({gif}) {
 
   return (
     <div>
-      <Card className="card bg-light mb-4" style={{ width: '18rem' }}>
-        <Card.Img variant="top" src={image}/>
+      <Card className="card bg-light mb-4" style={{ width: '18rem', margin:"10%" }}>
+        <Card.Img  variant="top" src={image}/>
         <Card.Body>
           <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>
         </Card.Body>

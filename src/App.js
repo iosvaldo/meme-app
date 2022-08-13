@@ -1,4 +1,4 @@
-import './App.css';
+import './index.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './Home';
 import GIFLibrary from './GIFLibrary';
@@ -10,9 +10,10 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
-        <Navigate className="App-header"/>
+     
         <header >
+        <Navigate className="App-header"/>
+        </header>
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -24,8 +25,7 @@ function App() {
                 <MemeGenerator />
               </Route>
             </Switch>
-        </header>
-      </div>
+     
     </Router>
   );
 }
