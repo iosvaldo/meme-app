@@ -12,7 +12,7 @@ function MemeGenerator() {
     "bottomText": "",
   })
 
-  const [canvasImage, setCanvasImage] = useState("https://content.hostgator.com/img/weebly_image_sample.png")
+  const [canvasImage, setCanvasImage] = useState({image:"https://content.hostgator.com/img/weebly_image_sample.png"})
     
   useEffect(() => {
     fetch('https://api.imgflip.com/get_memes')
@@ -138,7 +138,7 @@ function MemeGenerator() {
         Add Meme
       </Button>
       {showForm ? (
-        <form className="zero meme-generator">
+        <form className=" meme-generator">
           <label>Select an Image</label>
           <input
             type="file"
@@ -162,9 +162,9 @@ function MemeGenerator() {
             value={canvasState.topText}
             onChange={handleChangeTop}
           />
-          <label className="zero">Bottom Text</label>
+          <label >Bottom Text</label>
           <input
-            className="zero"
+           
             type="text"
             name="bottomText"
             id="bottomTextInput"
@@ -173,17 +173,18 @@ function MemeGenerator() {
           />
           <Button
             id="download"
-            className="meme-generator zero"
+            
             variant="danger"
             type="button"
             onClick={handleDownload}
           >
             Download
           </Button>
+          
         </form>
       ) : null}
       <canvas
-        className="canvasbord"
+        className="canvasboard"
         id="memegenerator"
         src={canvasImage}
       ></canvas>

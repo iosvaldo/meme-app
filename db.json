@@ -137,12 +137,6 @@
       "likes":4
     },
     {
-      "id": 3,
-      "name":"Hi, I'm Chucky. Wanna play?",
-      "image":"https://y.yarn.co/14e64814-b2f3-4783-8bc9-bae4652664a6_text.gif",
-      "likes":4
-    },
-    {
       "id": 4,
       "name":"Chris rock & will smith, Insert Coin slap",
       "image":"https://www.emugifs.net/wp-content/uploads/2022/03/Street-Fighter-II-Will-Smith-Chris-Rock-Intro-Opening-Funny-GIF-Like-Fighting-Video-Game.gif",
@@ -176,12 +170,6 @@
       "id": 9,
       "name":"farting family guy",
       "image":"https://i.pinimg.com/originals/3c/eb/fa/3cebfa3e8e70fa50c3ab25418be93a01.gif",
-      "likes":5
-    },
-    {
-      "id": 10,
-      "name":"Jim Carrey, Do i have something in my teeth? pet detective",
-      "image":"http://i2.cdn.turner.com/dr/hln/www/release/sites/default/files/static/images/Alice/jimcarey_giphy.gif",
       "likes":5
     },
     {
@@ -396,3 +384,4 @@
     }
   ]
 }
+
