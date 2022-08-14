@@ -19,7 +19,7 @@ function GIFLibrary() {
   }
   
   return (
-    <div className="home-container d-grid gap-2">
+    <div >
       <Search handleSearch={handleSearch}/>
       <div className="cards">
         {searchMemes.reverse().map((gif) => <GifCards key={gif.id} gif={gif}/>)}

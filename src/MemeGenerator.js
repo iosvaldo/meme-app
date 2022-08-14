@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import MemeCards from './MemeCards'
 import Button from 'react-bootstrap/Button'
+// import placeholder from './images/placeholder.png'
 
-function MemeGenerator() {
+function MemeGenerator({placeholder}) {
   const [memes, setMemes] = useState([])
   const [showForm, setShowForm] = useState(false)
   const [canvasState, setCanvasState] = useState({
@@ -12,7 +13,7 @@ function MemeGenerator() {
     "bottomText": "",
   })
 
-  const [canvasImage, setCanvasImage] = useState({image:"https://content.hostgator.com/img/weebly_image_sample.png"})
+  const [canvasImage, setCanvasImage] = useState({placeholder})
     
   useEffect(() => {
     fetch('https://api.imgflip.com/get_memes')
@@ -173,7 +174,6 @@ function MemeGenerator() {
           />
           <Button
             id="download"
-            
             variant="danger"
             type="button"
             onClick={handleDownload}

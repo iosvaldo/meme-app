@@ -12,15 +12,17 @@ function GifCards({gif}) {
   }
 
   return (
-    <div>
-      <Card className="card bg-light mb-4" style={{ width: '18rem', margin:"10%" }}>
-        <Card.Img  variant="top" src={image}/>
+    < >
+      <Card >
+        <Card.Img  variant="top" src={image} />
         <Card.Body>
-          <Button variant="danger" onClick={handleClick}>♡ {likes}</Button>
+          <Button variant="danger" onClick={handleClick}>
+            ♡ {likes}
+          </Button>
         </Card.Body>
       </Card>
-    </div>
-  )
+    </>
+  );
 }
 
 export default GifCards
